@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::redirect('/', '/client');
+
+Route::get('/client', 'GameController@client');
+
+Route::match(['get', 'post'], '/server/{id?}', 'GameController@server');
