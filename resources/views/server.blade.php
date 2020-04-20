@@ -1,4 +1,5 @@
 <p>Тур: {{ $round->round_id }}</p>
+<p>Номер: {{ $round->number }}</p>
 <p>Участников: {{ $tickets_count }}</p>
 <p>Банк: {{ $bank }}</p>
 <p>Прибыль: {{ $profit }}</p>

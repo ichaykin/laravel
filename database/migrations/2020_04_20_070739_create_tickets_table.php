@@ -14,7 +14,8 @@ class CreateTicketsTable extends Migration
     public function up()
     {
         Schema::create('tickets', function (Blueprint $table) {
-            $table->string('token', 80)->unique()->primary();
+            $table->bigIncrements('ticket_id');
+            $table->string('token', 80)->unique();
             $table->text('numbers');
             $table->boolean('is_winning')->default(false);
             $table->timestamps();

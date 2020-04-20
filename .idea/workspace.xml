@@ -115,7 +115,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587363175168</updated>
-      <workItem from="1587363176427" duration="21769000" />
+      <workItem from="1587363176427" duration="25042000" />
     </task>
     <servers />
   </component>
@@ -131,5 +131,9 @@
       <screen x="1366" y="0" width="1920" height="1080" />
     </state>
     <state x="2031" y="401" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.357.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1587375813875" />
+    <state x="2010" y="246" key="run.anything.popup" timestamp="1587388575898">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2010" y="246" key="run.anything.popup/0.357.1366.768/1366.0.1920.1080@1366.0.1920.1080" timestamp="1587388575898" />
   </component>
 </project>
