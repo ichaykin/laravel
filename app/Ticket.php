@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 
 class Ticket extends Model
@@ -44,7 +45,7 @@ class Ticket extends Model
                 if (!$field[$i][$column]) {
                     $number = rand($column*10 + 1,($column+1)*10);
 
-                    if (in_array($number, $field)) {
+                    if (in_array($number, Arr::flatten($field))) {
                         continue;
                     }
 
