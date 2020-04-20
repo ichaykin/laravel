@@ -33,6 +33,12 @@ class GameController extends Controller
             $ticket->save();
         }
 
+        if ($ticket->is_winning) {
+            $data = DB::table('winning_tickets')->where('ticket_id', $ticket->ticket_id)->get()->first();
+            $ticket->round_id = $data->round_id;
+            $ticket->summa = $data->summa;
+        }
+
         $ticket->numbers = unserialize($ticket->numbers);
 
         return response()
@@ -64,8 +70,10 @@ class GameController extends Controller
 
             return redirect('/server/');// . $round->round_id);
         }
+
         if ($id) {
-            return 'вернуть 10 билетов с максимальным выйгрышом';
+            $tickets = DB::table('winning_tickets')->where('round_id', $id)->orderBy('summa', 'desc')->limit(10)->get();
+            return $tickets;
         } else {
             $round = Round::latest()->first();
 
